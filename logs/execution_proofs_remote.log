@@ -1,0 +1,178 @@
+================================================================================
+>>> INITIATING KEC VAC ENGINE AUTOMATED EXECUTION RUN <<<
+================================================================================
+[DB_PROOF] Test Connection Result: SUCCESSFUL
+[REGEX_CHECK] Code: 'VAC-101' -> PASS [VALID] (Valid standard code)
+[REGEX_CHECK] Code: 'VAC-205' -> PASS [VALID] (Valid standard code)
+[REGEX_CHECK] Code: 'VAC-999' -> PASS [VALID] (Valid standard code)
+[REGEX_CHECK] Code: 'VAC-12' -> FAIL [INVALID] (Invalid: only 2 digits, requires 3)
+[REGEX_CHECK] Code: 'vac-101' -> FAIL [INVALID] (Invalid: lowercase prefix, requires uppercase)
+[REGEX_CHECK] Code: 'VAC-1234' -> FAIL [INVALID] (Invalid: 4 digits, exceeds 3 digit specification)
+[REGEX_CHECK] Code: 'ABC-101' -> FAIL [INVALID] (Invalid: prefix is ABC instead of VAC)
+[REGEX_CHECK] Code: 'VAC-A01' -> FAIL [INVALID] (Invalid: non-numeric digit component)
+[REGEX_CHECK] Code: ' VAC-101 ' -> FAIL [INVALID] (Invalid: untrimmed surrounding whitespace)
+[REGEX_CHECK] Code: '' -> FAIL [INVALID] (Invalid: empty string)
+[QUIZ_SUCCESS] Imported score 92.50 for 25ITR001 (VAC-101)
+[QUIZ_SUCCESS] Imported score 70.00 for 25ITR003 (VAC-101)
+[QUIZ_SUCCESS] Imported score 85.00 for 25ITR005 (VAC-101)
+[QUIZ_SUCCESS] Imported score 90.00 for 25ITR006 (VAC-101)
+[QUIZ_ERROR] Line 14: Malformed tokens in '25ITR099,VAC-101'
+[QUIZ_ERROR] Line 17: Score out-of-range (145.00)
+[QUIZ_ERROR] Line 20: Score out-of-range (-15.00)
+[QUIZ_ERROR] Line 23: Invalid course code 'INVALID_COURSE'
+[QUIZ_ERROR] Line 26: Non-numeric score 'AB_SCORE'
+[QUIZ_ERROR] Line 31: Invalid course code 'VAC-12'
+[CONCURRENCY_START] Launching batch evaluation for 11 items on 4 threads
+[2026-11-08 19:57:23.288] [GradingPool-Worker-1] Student: 25ITR001  Course: VAC-101  Track: INDUSTRY Score:  93.10% Badge: GOLD       Status: ISSUED     | Passed successfully with GOLD badge
+[2026-11-08 19:57:23.288] [GradingPool-Worker-2] Student: 25ITR001  Course: VAC-103  Track: SOFT     Score:  91.40% Badge: GOLD       Status: ISSUED     | Passed successfully with GOLD badge
+[2026-11-08 19:57:23.288] [GradingPool-Worker-3] Student: 25ITR002  Course: VAC-102  Track: SKILL    Score:  85.00% Badge: SILVER     Status: ISSUED     | Passed successfully with SILVER badge
+[2026-11-08 19:57:23.288] [GradingPool-Worker-4] Student: 25ITR003  Course: VAC-101  Track: INDUSTRY Score:  67.50% Badge: COMPLETED  Status: ISSUED     | Passed successfully with COMPLETED badge
+[2026-11-08 19:57:23.315] [GradingPool-Worker-1] Student: 25ITR007  Course: VAC-103  Track: SOFT     Score:  94.10% Badge: GOLD       Status: ISSUED     | Passed successfully with GOLD badge
+[2026-11-08 19:57:23.315] [GradingPool-Worker-2] Student: 25ITR005  Course: VAC-101  Track: INDUSTRY Score:  88.40% Badge: INCOMPLETE Status: INCOMPLETE | Attendance 72.00% < 80.0% requirement -> Certificate Withheld
+[2026-11-08 19:57:23.315] [GradingPool-Worker-4] Student: 25ITR006  Course: VAC-101  Track: INDUSTRY Score:  79.50% Badge: FAILED     Status: FAILED     | Key component 'Final Exam (P3)' score 45.00 < 50.0% minimum (Total: 79.50%)
+[2026-11-08 19:57:23.315] [GradingPool-Worker-3] Student: 25ITR004  Course: VAC-103  Track: SOFT     Score:  45.90% Badge: FAILED     Status: FAILED     | Key component 'Presentation (P3)' score 48.00 < 50.0% minimum (Total: 45.90%)
+[2026-11-08 19:57:23.332] [GradingPool-Worker-1] Student: 25ITR008  Course: VAC-102  Track: SKILL    Score:  74.20% Badge: COMPLETED  Status: ISSUED     | Passed successfully with COMPLETED badge
+[2026-11-08 19:57:23.332] [GradingPool-Worker-2] Student: 25ITR009  Course: VAC-102  Track: SKILL    Score:  61.20% Badge: FAILED     Status: FAILED     | Key component 'Hands-on Labs (P1)' score 45.00 < 50.0% minimum (Total: 61.20%)
+[2026-11-08 19:57:23.333] [GradingPool-Worker-4] Student: 25ITR010  Course: VAC-101  Track: INDUSTRY Score:     N/A Badge: PENDING    Status: PENDING    | SKIPPED: Missing required phases for INDUSTRY track (P2=78.0, P3=null, Quiz=null)
+[CONCURRENCY_END] Batch parallel evaluation finished successfully.
+[-] Skipping certificate for Student 25ITR004 in VAC-103 (Status: FAILED, Badge: FAILED)
+[-] Skipping certificate for Student 25ITR005 in VAC-101 (Status: INCOMPLETE, Badge: INCOMPLETE)
+[-] Skipping certificate for Student 25ITR006 in VAC-101 (Status: FAILED, Badge: FAILED)
+[-] Skipping certificate for Student 25ITR009 in VAC-102 (Status: FAILED, Badge: FAILED)
+[-] Skipping certificate for Student 25ITR010 in VAC-101 (Status: PENDING, Badge: PENDING)
+[+] Certificate Generated: [CertWriter-3] -> output/certificates/CERT_25ITR002_VAC-102.txt
+[+] Certificate Generated: [CertWriter-2] -> output/certificates/CERT_25ITR001_VAC-103.txt
+[+] Certificate Generated: [CertWriter-3] -> output/certificates/CERT_25ITR003_VAC-101.txt
+[+] Certificate Generated: [CertWriter-2] -> output/certificates/CERT_25ITR007_VAC-103.txt
+[+] Certificate Generated: [CertWriter-1] -> output/certificates/CERT_25ITR001_VAC-101.txt
+[+] Certificate Generated: [CertWriter-3] -> output/certificates/CERT_25ITR008_VAC-102.txt
+[ACHIEVEMENT_INDEX] Student: 25ITR001  Courses: 2 Credits: 4 Breakdown: [VAC-101:GOLD, VAC-103:GOLD] -> Index: 20.00
+[ACHIEVEMENT_INDEX] Student: 25ITR002  Courses: 1 Credits: 2 Breakdown: [VAC-102:SILVER] -> Index: 16.00
+[ACHIEVEMENT_INDEX] Student: 25ITR003  Courses: 1 Credits: 3 Breakdown: [VAC-101:COMPLETED] -> Index: 18.00
+[ACHIEVEMENT_INDEX] Student: 25ITR004  Courses: 1 Credits: 1 Breakdown: [VAC-103:FAILED] -> Index: 0.00
+[ACHIEVEMENT_INDEX] Student: 25ITR005  Courses: 1 Credits: 3 Breakdown: [VAC-101:INCOMPLETE] -> Index: 0.00
+[ACHIEVEMENT_INDEX] Student: 25ITR006  Courses: 1 Credits: 3 Breakdown: [VAC-101:FAILED] -> Index: 0.00
+[ACHIEVEMENT_INDEX] Student: 25ITR007  Courses: 1 Credits: 1 Breakdown: [VAC-103:GOLD] -> Index: 10.00
+[ACHIEVEMENT_INDEX] Student: 25ITR008  Courses: 1 Credits: 2 Breakdown: [VAC-102:COMPLETED] -> Index: 12.00
+[ACHIEVEMENT_INDEX] Student: 25ITR009  Courses: 1 Credits: 2 Breakdown: [VAC-102:FAILED] -> Index: 0.00
+[ACHIEVEMENT_INDEX] Student: 25ITR010  Courses: 1 Credits: 3 Breakdown: [VAC-101:PENDING] -> Index: 0.00
+================================================================================
+>>> INITIATING KEC VAC ENGINE AUTOMATED EXECUTION RUN <<<
+================================================================================
+[DB_PROOF] Test Connection Result: SUCCESSFUL
+[REGEX_CHECK] Code: 'VAC-101' -> PASS [VALID] (Valid standard code)
+[REGEX_CHECK] Code: 'VAC-205' -> PASS [VALID] (Valid standard code)
+[REGEX_CHECK] Code: 'VAC-999' -> PASS [VALID] (Valid standard code)
+[REGEX_CHECK] Code: 'VAC-12' -> FAIL [INVALID] (Invalid: only 2 digits, requires 3)
+[REGEX_CHECK] Code: 'vac-101' -> FAIL [INVALID] (Invalid: lowercase prefix, requires uppercase)
+[REGEX_CHECK] Code: 'VAC-1234' -> FAIL [INVALID] (Invalid: 4 digits, exceeds 3 digit specification)
+[REGEX_CHECK] Code: 'ABC-101' -> FAIL [INVALID] (Invalid: prefix is ABC instead of VAC)
+[REGEX_CHECK] Code: 'VAC-A01' -> FAIL [INVALID] (Invalid: non-numeric digit component)
+[REGEX_CHECK] Code: ' VAC-101 ' -> FAIL [INVALID] (Invalid: untrimmed surrounding whitespace)
+[REGEX_CHECK] Code: '' -> FAIL [INVALID] (Invalid: empty string)
+[QUIZ_SUCCESS] Imported score 92.50 for 25ITR001 (VAC-101)
+[QUIZ_SUCCESS] Imported score 70.00 for 25ITR003 (VAC-101)
+[QUIZ_SUCCESS] Imported score 85.00 for 25ITR005 (VAC-101)
+[QUIZ_SUCCESS] Imported score 90.00 for 25ITR006 (VAC-101)
+[QUIZ_ERROR] Line 14: Malformed tokens in '25ITR099,VAC-101'
+[QUIZ_ERROR] Line 17: Score out-of-range (145.00)
+[QUIZ_ERROR] Line 20: Score out-of-range (-15.00)
+[QUIZ_ERROR] Line 23: Invalid course code 'INVALID_COURSE'
+[QUIZ_ERROR] Line 26: Non-numeric score 'AB_SCORE'
+[QUIZ_ERROR] Line 31: Invalid course code 'VAC-12'
+[CONCURRENCY_START] Launching batch evaluation for 11 items on 4 threads
+[2026-11-08 20:02:59.003] [GradingPool-Worker-3] Student: 25ITR002  Course: VAC-102  Track: SKILL    Score:  85.00% Badge: SILVER     Status: ISSUED     | Passed successfully with SILVER badge
+[2026-11-08 20:02:59.003] [GradingPool-Worker-1] Student: 25ITR001  Course: VAC-101  Track: INDUSTRY Score:  93.10% Badge: GOLD       Status: ISSUED     | Passed successfully with GOLD badge
+[2026-11-08 20:02:59.003] [GradingPool-Worker-2] Student: 25ITR001  Course: VAC-103  Track: SOFT     Score:  91.40% Badge: GOLD       Status: ISSUED     | Passed successfully with GOLD badge
+[2026-11-08 20:02:59.003] [GradingPool-Worker-4] Student: 25ITR003  Course: VAC-101  Track: INDUSTRY Score:  67.50% Badge: COMPLETED  Status: ISSUED     | Passed successfully with COMPLETED badge
+[2026-11-08 20:02:59.027] [GradingPool-Worker-1] Student: 25ITR007  Course: VAC-103  Track: SOFT     Score:  94.10% Badge: GOLD       Status: ISSUED     | Passed successfully with GOLD badge
+[2026-11-08 20:02:59.027] [GradingPool-Worker-2] Student: 25ITR005  Course: VAC-101  Track: INDUSTRY Score:  88.40% Badge: INCOMPLETE Status: INCOMPLETE | Attendance 72.00% < 80.0% requirement -> Certificate Withheld
+[2026-11-08 20:02:59.027] [GradingPool-Worker-4] Student: 25ITR004  Course: VAC-103  Track: SOFT     Score:  45.90% Badge: FAILED     Status: FAILED     | Key component 'Presentation (P3)' score 48.00 < 50.0% minimum (Total: 45.90%)
+[2026-11-08 20:02:59.027] [GradingPool-Worker-3] Student: 25ITR006  Course: VAC-101  Track: INDUSTRY Score:  79.50% Badge: FAILED     Status: FAILED     | Key component 'Final Exam (P3)' score 45.00 < 50.0% minimum (Total: 79.50%)
+[2026-11-08 20:02:59.045] [GradingPool-Worker-2] Student: 25ITR008  Course: VAC-102  Track: SKILL    Score:  74.20% Badge: COMPLETED  Status: ISSUED     | Passed successfully with COMPLETED badge
+[2026-11-08 20:02:59.045] [GradingPool-Worker-4] Student: 25ITR009  Course: VAC-102  Track: SKILL    Score:  61.20% Badge: FAILED     Status: FAILED     | Key component 'Hands-on Labs (P1)' score 45.00 < 50.0% minimum (Total: 61.20%)
+[2026-11-08 20:02:59.045] [GradingPool-Worker-1] Student: 25ITR010  Course: VAC-101  Track: INDUSTRY Score:     N/A Badge: PENDING    Status: PENDING    | SKIPPED: Missing required phases for INDUSTRY track (P2=78.0, P3=null, Quiz=null)
+[CONCURRENCY_END] Batch parallel evaluation finished successfully.
+[-] Skipping certificate for Student 25ITR004 in VAC-103 (Status: FAILED, Badge: FAILED)
+[-] Skipping certificate for Student 25ITR005 in VAC-101 (Status: INCOMPLETE, Badge: INCOMPLETE)
+[-] Skipping certificate for Student 25ITR006 in VAC-101 (Status: FAILED, Badge: FAILED)
+[-] Skipping certificate for Student 25ITR009 in VAC-102 (Status: FAILED, Badge: FAILED)
+[-] Skipping certificate for Student 25ITR010 in VAC-101 (Status: PENDING, Badge: PENDING)
+[+] Certificate Generated: [CertWriter-3] -> output/certificates/CERT_25ITR002_VAC-102.txt
+[+] Certificate Generated: [CertWriter-2] -> output/certificates/CERT_25ITR001_VAC-103.txt
+[+] Certificate Generated: [CertWriter-1] -> output/certificates/CERT_25ITR001_VAC-101.txt
+[+] Certificate Generated: [CertWriter-2] -> output/certificates/CERT_25ITR007_VAC-103.txt
+[+] Certificate Generated: [CertWriter-3] -> output/certificates/CERT_25ITR003_VAC-101.txt
+[+] Certificate Generated: [CertWriter-1] -> output/certificates/CERT_25ITR008_VAC-102.txt
+[ACHIEVEMENT_INDEX] Student: 25ITR001  Courses: 2 Credits: 4 Breakdown: [VAC-101:GOLD, VAC-103:GOLD] -> Index: 20.00
+[ACHIEVEMENT_INDEX] Student: 25ITR002  Courses: 1 Credits: 2 Breakdown: [VAC-102:SILVER] -> Index: 16.00
+[ACHIEVEMENT_INDEX] Student: 25ITR003  Courses: 1 Credits: 3 Breakdown: [VAC-101:COMPLETED] -> Index: 18.00
+[ACHIEVEMENT_INDEX] Student: 25ITR004  Courses: 1 Credits: 1 Breakdown: [VAC-103:FAILED] -> Index: 0.00
+[ACHIEVEMENT_INDEX] Student: 25ITR005  Courses: 1 Credits: 3 Breakdown: [VAC-101:INCOMPLETE] -> Index: 0.00
+[ACHIEVEMENT_INDEX] Student: 25ITR006  Courses: 1 Credits: 3 Breakdown: [VAC-101:FAILED] -> Index: 0.00
+[ACHIEVEMENT_INDEX] Student: 25ITR007  Courses: 1 Credits: 1 Breakdown: [VAC-103:GOLD] -> Index: 10.00
+[ACHIEVEMENT_INDEX] Student: 25ITR008  Courses: 1 Credits: 2 Breakdown: [VAC-102:COMPLETED] -> Index: 12.00
+[ACHIEVEMENT_INDEX] Student: 25ITR009  Courses: 1 Credits: 2 Breakdown: [VAC-102:FAILED] -> Index: 0.00
+[ACHIEVEMENT_INDEX] Student: 25ITR010  Courses: 1 Credits: 3 Breakdown: [VAC-101:PENDING] -> Index: 0.00
+================================================================================
+>>> INITIATING KEC VAC ENGINE AUTOMATED EXECUTION RUN <<<
+================================================================================
+[DB_PROOF] Test Connection Result: SUCCESSFUL
+[REGEX_CHECK] Code: 'VAC-101' -> PASS [VALID] (Valid standard code)
+[REGEX_CHECK] Code: 'VAC-205' -> PASS [VALID] (Valid standard code)
+[REGEX_CHECK] Code: 'VAC-999' -> PASS [VALID] (Valid standard code)
+[REGEX_CHECK] Code: 'VAC-12' -> FAIL [INVALID] (Invalid: only 2 digits, requires 3)
+[REGEX_CHECK] Code: 'vac-101' -> FAIL [INVALID] (Invalid: lowercase prefix, requires uppercase)
+[REGEX_CHECK] Code: 'VAC-1234' -> FAIL [INVALID] (Invalid: 4 digits, exceeds 3 digit specification)
+[REGEX_CHECK] Code: 'ABC-101' -> FAIL [INVALID] (Invalid: prefix is ABC instead of VAC)
+[REGEX_CHECK] Code: 'VAC-A01' -> FAIL [INVALID] (Invalid: non-numeric digit component)
+[REGEX_CHECK] Code: ' VAC-101 ' -> FAIL [INVALID] (Invalid: untrimmed surrounding whitespace)
+[REGEX_CHECK] Code: '' -> FAIL [INVALID] (Invalid: empty string)
+[QUIZ_SUCCESS] Imported score 92.50 for 25ITR001 (VAC-101)
+[QUIZ_SUCCESS] Imported score 70.00 for 25ITR003 (VAC-101)
+[QUIZ_SUCCESS] Imported score 85.00 for 25ITR005 (VAC-101)
+[QUIZ_SUCCESS] Imported score 90.00 for 25ITR006 (VAC-101)
+[QUIZ_ERROR] Line 14: Malformed tokens in '25ITR099,VAC-101'
+[QUIZ_ERROR] Line 17: Score out-of-range (145.00)
+[QUIZ_ERROR] Line 20: Score out-of-range (-15.00)
+[QUIZ_ERROR] Line 23: Invalid course code 'INVALID_COURSE'
+[QUIZ_ERROR] Line 26: Non-numeric score 'AB_SCORE'
+[QUIZ_ERROR] Line 31: Invalid course code 'VAC-12'
+[CONCURRENCY_START] Launching batch evaluation for 11 items on 4 threads
+[2026-11-08 20:04:44.015] [GradingPool-Worker-4] Student: 25ITR003  Course: VAC-101  Track: INDUSTRY Score:  67.50% Badge: COMPLETED  Status: ISSUED     | Passed successfully with COMPLETED badge
+[2026-11-08 20:04:44.015] [GradingPool-Worker-2] Student: 25ITR001  Course: VAC-103  Track: SOFT     Score:  91.40% Badge: GOLD       Status: ISSUED     | Passed successfully with GOLD badge
+[2026-11-08 20:04:44.015] [GradingPool-Worker-1] Student: 25ITR001  Course: VAC-101  Track: INDUSTRY Score:  93.10% Badge: GOLD       Status: ISSUED     | Passed successfully with GOLD badge
+[2026-11-08 20:04:44.015] [GradingPool-Worker-3] Student: 25ITR002  Course: VAC-102  Track: SKILL    Score:  85.00% Badge: SILVER     Status: ISSUED     | Passed successfully with SILVER badge
+[2026-11-08 20:04:44.039] [GradingPool-Worker-1] Student: 25ITR007  Course: VAC-103  Track: SOFT     Score:  94.10% Badge: GOLD       Status: ISSUED     | Passed successfully with GOLD badge
+[2026-11-08 20:04:44.039] [GradingPool-Worker-2] Student: 25ITR005  Course: VAC-101  Track: INDUSTRY Score:  88.40% Badge: INCOMPLETE Status: INCOMPLETE | Attendance 72.00% < 80.0% requirement -> Certificate Withheld
+[2026-11-08 20:04:44.039] [GradingPool-Worker-4] Student: 25ITR006  Course: VAC-101  Track: INDUSTRY Score:  79.50% Badge: FAILED     Status: FAILED     | Key component 'Final Exam (P3)' score 45.00 < 50.0% minimum (Total: 79.50%)
+[2026-11-08 20:04:44.039] [GradingPool-Worker-3] Student: 25ITR004  Course: VAC-103  Track: SOFT     Score:  45.90% Badge: FAILED     Status: FAILED     | Key component 'Presentation (P3)' score 48.00 < 50.0% minimum (Total: 45.90%)
+[2026-11-08 20:04:44.061] [GradingPool-Worker-1] Student: 25ITR008  Course: VAC-102  Track: SKILL    Score:  74.20% Badge: COMPLETED  Status: ISSUED     | Passed successfully with COMPLETED badge
+[2026-11-08 20:04:44.061] [GradingPool-Worker-3] Student: 25ITR009  Course: VAC-102  Track: SKILL    Score:  61.20% Badge: FAILED     Status: FAILED     | Key component 'Hands-on Labs (P1)' score 45.00 < 50.0% minimum (Total: 61.20%)
+[2026-11-08 20:04:44.061] [GradingPool-Worker-4] Student: 25ITR010  Course: VAC-101  Track: INDUSTRY Score:     N/A Badge: PENDING    Status: PENDING    | SKIPPED: Missing required phases for INDUSTRY track (P2=78.0, P3=null, Quiz=null)
+[CONCURRENCY_END] Batch parallel evaluation finished successfully.
+[-] Skipping certificate for Student 25ITR004 in VAC-103 (Status: FAILED, Badge: FAILED)
+[-] Skipping certificate for Student 25ITR005 in VAC-101 (Status: INCOMPLETE, Badge: INCOMPLETE)
+[-] Skipping certificate for Student 25ITR006 in VAC-101 (Status: FAILED, Badge: FAILED)
+[-] Skipping certificate for Student 25ITR009 in VAC-102 (Status: FAILED, Badge: FAILED)
+[-] Skipping certificate for Student 25ITR010 in VAC-101 (Status: PENDING, Badge: PENDING)
+[+] Certificate Generated: [CertWriter-3] -> output/certificates/CERT_25ITR002_VAC-102.txt
+[+] Certificate Generated: [CertWriter-2] -> output/certificates/CERT_25ITR001_VAC-103.txt
+[+] Certificate Generated: [CertWriter-1] -> output/certificates/CERT_25ITR001_VAC-101.txt
+[+] Certificate Generated: [CertWriter-3] -> output/certificates/CERT_25ITR003_VAC-101.txt
+[+] Certificate Generated: [CertWriter-2] -> output/certificates/CERT_25ITR007_VAC-103.txt
+[+] Certificate Generated: [CertWriter-1] -> output/certificates/CERT_25ITR008_VAC-102.txt
+[ACHIEVEMENT_INDEX] Student: 25ITR001  Courses: 2 Credits: 4 Breakdown: [VAC-101:GOLD, VAC-103:GOLD] -> Index: 20.00
+[ACHIEVEMENT_INDEX] Student: 25ITR002  Courses: 1 Credits: 2 Breakdown: [VAC-102:SILVER] -> Index: 16.00
+[ACHIEVEMENT_INDEX] Student: 25ITR003  Courses: 1 Credits: 3 Breakdown: [VAC-101:COMPLETED] -> Index: 18.00
+[ACHIEVEMENT_INDEX] Student: 25ITR004  Courses: 1 Credits: 1 Breakdown: [VAC-103:FAILED] -> Index: 0.00
+[ACHIEVEMENT_INDEX] Student: 25ITR005  Courses: 1 Credits: 3 Breakdown: [VAC-101:INCOMPLETE] -> Index: 0.00
+[ACHIEVEMENT_INDEX] Student: 25ITR006  Courses: 1 Credits: 3 Breakdown: [VAC-101:FAILED] -> Index: 0.00
+[ACHIEVEMENT_INDEX] Student: 25ITR007  Courses: 1 Credits: 1 Breakdown: [VAC-103:GOLD] -> Index: 10.00
+[ACHIEVEMENT_INDEX] Student: 25ITR008  Courses: 1 Credits: 2 Breakdown: [VAC-102:COMPLETED] -> Index: 12.00
+[ACHIEVEMENT_INDEX] Student: 25ITR009  Courses: 1 Credits: 2 Breakdown: [VAC-102:FAILED] -> Index: 0.00
+[ACHIEVEMENT_INDEX] Student: 25ITR010  Courses: 1 Credits: 3 Breakdown: [VAC-101:PENDING] -> Index: 0.00
+[DB_PROOF] Test Connection Result: SUCCESSFUL
+================================================================================
+>>> INITIATING KEC VAC ENGINE AUTOMATED EXECUTION RUN <<<
+================================================================================

@@ -1,0 +1,31 @@
+# ==============================================================================
+# KEC VAC & Skill Certification Engine - Raw Quiz Marks Data Stream
+# Format: student_id,course_code,quiz_score
+# Handled gracefully: Malformed records, out-of-range values, invalid course codes
+# ==============================================================================
+
+# Valid sample quiz scores
+25ITR001,VAC-101,92.50
+25ITR003,VAC-101,70.00
+25ITR005,VAC-101,85.00
+25ITR006,VAC-101,90.00
+
+# Error Test Case 1: Malformed line (insufficient columns)
+25ITR099,VAC-101
+
+# Error Test Case 2: Out of range score (> 100)
+25ITR002,VAC-101,145.00
+
+# Error Test Case 3: Out of range score (< 0)
+25ITR007,VAC-101,-15.00
+
+# Error Test Case 4: Invalid course code regex (does not match VAC-[0-9]{3})
+25ITR008,INVALID_COURSE,85.00
+
+# Error Test Case 5: Non-numeric score
+25ITR009,VAC-101,AB_SCORE
+
+# Error Test Case 6: Empty whitespace line
+
+# Error Test Case 7: Invalid course code format
+25ITR010,VAC-12,75.00

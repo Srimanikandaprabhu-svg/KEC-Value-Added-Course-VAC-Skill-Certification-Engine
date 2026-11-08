@@ -1,0 +1,9 @@
+2026-11-08T15:33:39.957736Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2026-11-08T15:33:39.957751Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.46) starting as process 6028
+2026-11-08T15:33:39.977528Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-11-08T15:33:39.979131Z 1 [ERROR] [MY-012271] [InnoDB] The innodb_system data file 'ibdata1' must be writable
+2026-11-08T15:33:39.980610Z 1 [ERROR] [MY-012278] [InnoDB] The innodb_system data file 'ibdata1' must be writable
+2026-11-08T15:33:39.982010Z 1 [ERROR] [MY-010334] [Server] Failed to initialize DD Storage Engine
+2026-11-08T15:33:39.983552Z 0 [ERROR] [MY-010020] [Server] Data Dictionary initialization failed.
+2026-11-08T15:33:39.984465Z 0 [ERROR] [MY-010119] [Server] Aborting
+2026-11-08T15:33:39.985861Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.46)  MySQL Community Server - GPL.
